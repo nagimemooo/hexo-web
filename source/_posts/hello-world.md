@@ -7,9 +7,25 @@ categories:
   - Web
   - blog
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+> 這篇是採用hexo安裝後，自動產生的說明內容，再加上依照自己喜愛的設定所編寫之文章＾＾
+<!--more-->
+
+
+
+## 安裝 Hexo
+```
+$ npm install -g hexo-cli
+$ hexo init <folder>
+$ cd <folder>
+$ npm install
+```
+
 
 ## Quick Start
+
+
+Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+
 
 ### 顯示版本資訊。
 ``` bash
@@ -56,9 +72,11 @@ More info: [Server](https://hexo.io/docs/server.html)
 
 ``` bash
 $ hexo generate
+$ hexo g
 ```
 
-### 清除快取檔案 (db.json) 和已產生的靜態檔案 (public)。
+### Clean static files
+清除快取檔案 (db.json) 和已產生的靜態檔案 (public)。
 ``` bash
 $ hexo clean
 ```
@@ -73,9 +91,10 @@ $ hexo deploy
 
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
 
-### Change theme
+### 更換部落格主題
+- Hexo 預設主題是landscape，可以修改網站設定_config.yml來更換．
 
-這天換成theme：next，但是啟動hexo s後，開啟的網站卻是亂碼參數頁面＠＠
+- 這天換成theme：next，但是啟動hexo s後，開啟的網站卻是亂碼參數頁面＠＠
 啟動畫面也出現以下訊息：
 ```bash
 WARN  ========================= ATTENTION! ==========================
@@ -127,6 +146,18 @@ categories:
 - [Diary, Games]
 - [Life
 
+4. 在標頭放上可愛的git連結（右上角）
+
+github_banner:
+  enable: true
+
+5. 開啟作者照片
+avatar：圖片網址
+
+6. 放上社群連結
+social
+
+ 
 
 ### 參考文章
 [HEXO 指令](https://hexo.io/zh-tw/docs/commands.html)
