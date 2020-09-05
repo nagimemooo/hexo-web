@@ -138,7 +138,7 @@ $ hexo clean
 
 
 
-## 更換部落格主題
+## 更換部落格主題及個人化設定
 - Hexo 預設主題是landscape，可以修改主網站設定_config.yml來更換．
 
 - 這天換成 theme：next，但是啟動hexo s後，開啟的網站卻是亂碼參數頁面＠＠
@@ -162,13 +162,13 @@ theme: next-reloaded
 ### 更換主題設定檔
 主題設定位置：/hexo-web/themes/next-reloaded/_config.yml
 
-### 更換NexT版面
+#### 更換NexT版面
 ```
 
 scheme: Pisces
 ```
 
-### 新增文章標籤與分類
+#### 新增文章標籤與分類
 1. 新增頁面
 ```
 hexo new page tags
@@ -203,7 +203,7 @@ categories:
 - [Life
 ```
 
-### 文章中顯示引言
+#### 文章中顯示引言
 ```
 有分號的上下引言，兩種皆可
 <!-- 标签 方式，要求版本在0.4.5或以上 -->
@@ -220,7 +220,7 @@ categories:
 
 ```
 
-### 文章開頭標記
+#### 文章開頭標記
 ```
 {% note class_name %} Content (md partial supported) {% endnote %}
 其中class_name可不設或是改成下方關鍵字
@@ -239,7 +239,7 @@ categories:
 
 {% note danger %} danger {% endnote %}
 
-### 在標頭放上可愛的git連結
+#### 在標頭放上可愛的git連結
 ```
 _config.yml
 github_banner:
@@ -247,17 +247,34 @@ github_banner:
 （本部落格右上角範例）
 ```
 
-### 顯示部落格作者照片
+#### 顯示部落格作者照片
 ```
 _config.yml
 avatar：圖片網址
 ```
 
-### 放上個人社群連結
+#### 放上個人社群連結
 ```
 social
 可自由新增
 ```
+
+### 個人化設定
+
+#### 預設新增文章模板
+
+修改 /scaffolds/post.md 新增自己預設內容
+```
+---
+title: {{ title }}
+date: {{ date }}
+tags:
+categories:
+---
+blabla.....
+<!--more-->
+```
+意外發現的方法，藉由這樣修改hexo new post時就可以把基本的設定加好了
 
 ------------
 

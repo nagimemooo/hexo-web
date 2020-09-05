@@ -1,6 +1,6 @@
 ---
-title: {{ title }}
-date: {{ date }}
+title: new
+date: 2020-09-04 22:52:53
 tags:
 categories:
 ---
