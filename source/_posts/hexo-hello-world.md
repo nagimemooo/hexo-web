@@ -8,15 +8,15 @@ categories:
   - blog
 ---
 {% cq %} 
-## 前文 ：hexo是什麼？
+## 引文 ：hexo是什麼？
  {% endcq %}
  <blockquote class="blockquote-center">
  
-：Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 Markdown 標記語言）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。（來自 https://hexo.io/zh-tw/docs/）</blockquote>
+Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 Markdown 標記語言）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。（來自 https://hexo.io/zh-tw/docs/）</blockquote>
 
 
 
-### 本文將會知道：
+## 本文將會知道：
   1. 如何使用 Hexo 產生部落格
   2. 如何使用 markdown 撰寫文章
   3. 如何部署到 Git 個人網頁
@@ -26,7 +26,7 @@ categories:
 
 
 
-{% note class_name %} ## 安裝hexo與初始化 {% endnote %}
+## 安裝hexo與初始化 
 
 
 ### 產生基本部落格結構
@@ -75,7 +75,7 @@ tz: 2019a
 ```
 
 
-{% note class_name %} ## 開始撰寫文章 {% endnote %}
+ ## 開始撰寫文章
 
 ### 新增文章 Create a new post 
 
@@ -112,7 +112,7 @@ deploy:
 ``` bash
 $ hexo generate 或是hexo g
 會在public資料夾產生網站靜態檔案
-這是用來部署到網站的檔案
+這是用來部署到網站的檔案，記得每次部署前都要更新喔
 ```
 More info: [Generating](https://hexo.io/docs/generating.html)
 
@@ -120,14 +120,18 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 
 ``` bash
 $ hexo deploy
+（略）
+Branch 'master' set up to track remote branch 'master' from 'https://github.com/nagimemooo/nagimemooo.github.io'.
+INFO  Deploy done: git  
 ```
 
-其他空間(ex:heroku) More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+其他空間部署說明(ex:heroku) More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
 
 ### 個人網站網址
 
 https://yourname.github.io/
 
+- 這樣就大功告成啦！（註：有時要稍等一下才會看到更新）
 
 ### 清理靜態文件 Clean static files
 
@@ -257,6 +261,16 @@ avatar：圖片網址
 ```
 social
 可自由新增
+```
+
+#### 顯示閱讀進度百分比
+```
+back2top:
+  enable: true
+  # Back to top in sidebar.
+  sidebar: false 顯示在右下角 true代表顯示在側邊欄
+  # Scroll percent label in b2t button.
+  scrollpercent: true 顯示百分比
 ```
 
 ### 個人化設定
