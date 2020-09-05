@@ -8,31 +8,31 @@ categories:
   - blog
 ---
 {% cq %} 
-## 引文 ：hexo是什麼？
+# 引文 ：hexo是什麼？
  {% endcq %}
  <blockquote class="blockquote-center">
  
-Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 Markdown 標記語言）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。（來自 https://hexo.io/zh-tw/docs/）</blockquote>
+Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 Markdown 標記語言解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。（來自 https://hexo.io/zh-tw/docs/ 說明）</blockquote>
 
 
 
-## 本文將會知道：
-  1. 如何使用 Hexo 產生部落格
-  2. 如何使用 markdown 撰寫文章
-  3. 如何部署到 Git 個人網頁
+# 本文將會知道
+  1. 如何使用 Hexo 產生部落格 （超快速，只要看到這邊就建好囉！）
+  2. 如何使用 markdown 撰寫文章 
+  3. 如何部署到 github 個人網頁 
   4. 如何更改主題與內文風格 
 
 <!--more-->
+---
 
 
-
-## 安裝hexo與初始化 
+## 安裝hexo與初始化部落格
 
 
 ### 產生基本部落格結構
 
 ```
-安裝工具
+安裝工具 （使用npm安裝 可先安裝Node：https://nodejs.org/en/）
 $ npm install -g hexo-cli
 初始資料夾
 $ hexo init <folder>
@@ -45,11 +45,12 @@ $ npm install
 
 ``` bash
 $ hexo server
-開啟瀏覽器 http://localhost:4000 就可以看到部落格了
+開啟瀏覽器 http://localhost:4000 就可以看到部落格了💕💕💕
 ```
 More info: [Server](https://hexo.io/docs/server.html)
 
-### 顯示版本資訊 
+### （紀錄）顯示版本資訊 
+（有需要的話，可以查詢對應安裝版本）知道自己安裝的版本，對於之後查詢問題是很有幫助的喔！
 ``` bash
 $ hexo version
 (node:5190) ExperimentalWarning: The fs.promises API is experimental
@@ -73,32 +74,33 @@ unicode: 12.1
 cldr: 35.1
 tz: 2019a
 ```
+---
 
+## 開始撰寫文章
 
- ## 開始撰寫文章
-
-### 新增文章 Create a new post 
+### 新增文章
 
 ``` bash
 $ hexo new "My New Post"
 會在source/posts 底下新增一個 .md 檔案
-採用 markdown語法開始撰寫文章
 ```
 More info: [Writing](https://hexo.io/docs/writing.html)
 
+### 撰寫文章
 
+在剛剛新增的檔案開始採用 markdown語法開始撰寫文章．
+- 可以採用線上編輯器工具幫助撰寫及預覽 https://markdown-editor.github.io/ ，編輯完再貼過來內文．
+- 如對語法有一點熟悉，就直接用vscode打開檔案開始撰寫內文，並可以安裝vscode markdown preview 插件，邊改邊預覽．
 
+- 編寫完再啟動部落格並在瀏覽器查看效果．
 
-
-
+----
 
 ## 部署網站
 
-
-
 ### 建立與設定 Git 空間
 
-- 先在git上新增一個專案叫做[yourname].github.io
+- 先在github上新增一個專案叫與帳號一樣命名叫做“[yourname].github.io”
 - 配置 _config.yml
 ```
 deploy:
@@ -131,7 +133,7 @@ INFO  Deploy done: git
 
 https://yourname.github.io/
 
-- 這樣就大功告成啦！（註：有時要稍等一下才會看到更新）
+這樣就大功告成啦！🎉🎉🎉（註：有時要稍等一下才會看到更新）
 
 ### 清理靜態文件 Clean static files
 
@@ -142,12 +144,28 @@ $ hexo clean
 
 
 
-## 更換部落格主題及個人化設定
-- Hexo 預設主題是landscape，可以修改主網站設定_config.yml來更換．
+## 更換主題及個人化設定
 
-- 這天換成 theme：next，但是啟動hexo s後，開啟的網站卻是亂碼參數頁面＠＠
+### 更換主網站設定檔
+主網站設定檔位置：/your folder/_config.yml，可以在此編輯基本網站說明．
+#### 更換主題
+- Hexo 預設主題是landscape
+
+- 想要更換主題依下列步驟即可：
+1. 在 hexo 網站上挑選主題：https://hexo.io/themes/
+2. 然後依照教學 clone對方的主題到自己的 theme 資料夾(通常都有git指令，在自己資料夾照下即可)
+3. 修改主網站設定_config.yml來更換
+
+
+
+---
+- 本部落格採用Next，它是一個相當熱門的主題,且有很多中文文檔說明，我也是看了範例網站，真的太喜歡才決定架hexo的，紀錄操作步驟如下．
+  - (初次遇到錯誤，可跳置下方) 試著更換主題 
+  1. git clone https://github.com/iissnan/hexo-theme-next themes/next:
+
+  2. config.yml 換成 theme：next，但是啟動hexo s後，開啟的網站卻是亂碼參數頁面＠＠
 啟動畫面也出現以下訊息：
-```bash
+```
 WARN  ========================= ATTENTION! ==========================
   ===============================================================
 WARN   NexT repository is moving here: https://github.com/theme-next
@@ -155,21 +173,25 @@ WARN   NexT repository is moving here: https://github.com/theme-next
 WARN   It's rebase to v6.0.0 and future maintenance will resume there
  ===============================================================
 ```
-因此直接參考官方更新步驟[从 NexT v5.1.x 更新](https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/UPDATE-FROM-5.1.X.md "从 NexT v5.1.x 更新")
+原因應該是找到的文章教學，clone來源太舊了？改參考官方更新步驟[从 NexT v5.1.x 更新](https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/UPDATE-FROM-5.1.X.md "从 NexT v5.1.x 更新")
 
-1. Clone 新的倉庫（如 next-reloaded）：
+  - （再來一次）試著更換主題
+  1. Clone v7.8.0 最新的倉庫（如放在 next-reloaded）：
 $ git clone https://github.com/theme-next/hexo-theme-next themes/next-reloaded
-2. 在 Hexo 的主配置文件中设置主题：
+  2. 在 Hexo 的主配置文件中设置主题：
 theme: next-reloaded
-3. 重新開啟就正常了
+  3. 重新開啟就正常了
+- 之後想更換別的主題也是這樣喔
 
 ### 更換主題設定檔
 主題設定位置：/hexo-web/themes/next-reloaded/_config.yml
 
 #### 更換NexT版面
 ```
-
-scheme: Pisces
+NextT 提供不同風格可以更換
+#scheme: Muse 選單在上方
+#scheme: Mist 選單在上方
+scheme: Pisces 選單在側邊
 ```
 
 #### 新增文章標籤與分類
@@ -292,7 +314,7 @@ blabla.....
 
 ------------
 
-{% note class_name %} ## 參考文章 {% endnote %}
+{% note class_name %} # 參考文章 {% endnote %}
 
 - Quick Start
 Welcome to [Hexo](https://hexo.io/)!  Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues)
