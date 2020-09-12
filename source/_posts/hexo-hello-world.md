@@ -89,7 +89,7 @@ More info: [Writing](https://hexo.io/docs/writing.html)
 ### 撰寫文章
 
 在剛剛新增的檔案開始採用 markdown語法開始撰寫文章．
-- 可以採用線上編輯器工具幫助撰寫及預覽 https://markdown-editor.github.io/ ，編輯完再貼過來內文．
+- 可以找線上編輯器工具幫助撰寫及預覽，「自己習慣用這一個https://markdown-editor.github.io/」 ，編輯完再貼過來內文．
 - 如對語法有一點熟悉，就直接用vscode打開檔案開始撰寫內文，並可以安裝vscode markdown preview 插件，邊改邊預覽．
 
 - 編寫完再啟動部落格並在瀏覽器查看效果．
@@ -148,6 +148,17 @@ $ hexo clean
 
 ### 更換主網站設定檔
 主網站設定檔位置：/your folder/_config.yml，可以在此編輯基本網站說明．
+```
+title: Nagi's 程式筆記
+subtitle: '小小工程師 Ｍemo '
+description: ''
+keywords:
+author: Ｎagi
+language: zh-TW
+語言可以改為繁體中文，但對應顯示語言可以在以下位置修改：
+/your folder/themes/next-reloaded/languages/zh-TW.yml
+```
+
 #### 更換主題
 - Hexo 預設主題是landscape
 
@@ -183,7 +194,7 @@ theme: next-reloaded
   3. 重新開啟就正常了
 - 之後想更換別的主題也是這樣喔
 
-### 更換主題設定檔
+### 主題設定
 主題設定位置：/hexo-web/themes/next-reloaded/_config.yml
 
 #### 更換NexT版面
@@ -195,15 +206,39 @@ scheme: Pisces 選單在側邊
 ```
 
 #### 新增文章標籤與分類
-1. 新增頁面
+1. 新增標籤與分類頁面
 ```
 hexo new page tags
 hexo new page categories
 ```
 
-2. 開啟頁面
+2. 為文章加上Tag與categories
+在_posts/xxx.md 文章上方新增，差別在於標籤是並行的標示，而分類會有階層式關係．
+```
+---
+title: 使用Ｈexo 撰寫部落格
+tags:
+  - Testing
+  - Another Tag
+
+比較特別以下這種寫法代表階層關係Web->blog
+categories:
+  - Web
+  - blog
+
+或是多分類表示法：代表Diary->Food...
+categories:
+- [Diary, Food] 
+- [Diary, Games]
+- [Life]
+---
+```
+
+3. 開啟頁面
 ```
 _config.yml
+# Usage: `Key: /link/ || icon`
+# icon 也可以自由置換 https://fontawesome.com/v4.7.0/icons/
 menu:
   home: / || fa fa-home
   categories: /categories/ || fa fa-th
@@ -211,22 +246,34 @@ menu:
   tags: /tags/ || fa fa-tags
   about: /about/ || fa fa-user
 ```
-3. 為文章加上Tag與categories
+
+#### 新增個人頁面
+1. 新增關於我頁面
 ```
-tags:
-  - Testing
-  - Another Tag
+hexo new page about
+```
 
-代表Web->blog
-categories:
-  - Web
-  - blog
+2. 編輯頁面內容
+[your folder]/source/about/index.md
+```
+---
+title: About Me
+date: 2020-09-06 13:53:06
+---
+bla bla bla bla...
+```
 
-代表Diary->PlayStation
-categories:
-- [Diary, PlayStation] 
-- [Diary, Games]
-- [Life
+3. 開啟頁面
+```
+_config.yml
+# Usage: `Key: /link/ || icon`
+# icon 也可以自由置換 https://fontawesome.com/v4.7.0/icons/
+menu:
+  home: / || fa fa-home
+  categories: /categories/ || fa fa-th
+  archives: /archives/ || fa fa-archive
+  tags: /tags/ || fa fa-tags
+  about: /about/ || fa fa-user
 ```
 
 #### 文章中顯示引言
@@ -323,4 +370,5 @@ Welcome to [Hexo](https://hexo.io/)!  Check [documentation](https://hexo.io/docs
 - [NextT開始使用](https://theme-next.iissnan.com/getting-started.html)
 - [NextT 主题配置](https://theme-next.iissnan.com/theme-settings.html)
 - [NextT 內置標籤](https://theme-next.iissnan.com/tag-plugins.html)
+- [Hexo个人博客NexT主题设置Scheme外观](https://blog.csdn.net/mqdxiaoxiao/article/details/92843057?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param)
 
