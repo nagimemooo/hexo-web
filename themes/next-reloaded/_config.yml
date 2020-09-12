@@ -119,8 +119,8 @@ darkmode: false
 # External url should start with http:// or https://
 menu:
   home: / || fa fa-home
-  categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
+  categories: /categories/ || fa fa-th
   tags: /tags/ || fa fa-tags
   about: /about/ || fa fa-user
   #schedule: /schedule/ || fa fa-calendar
