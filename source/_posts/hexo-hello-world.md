@@ -4,11 +4,12 @@ tags:
   - hexo
   - blog
 categories:
+  - Tech.
   - Web
   - blog
 ---
 {% cq %} 
-# 引文 ：hexo是什麼？
+# hexo是什麼？
  {% endcq %}
  <blockquote class="blockquote-center">
  
@@ -311,6 +312,18 @@ menu:
 {% note warning %} warning {% endnote %}
 
 {% note danger %} danger {% endnote %}
+
+#### 文章中貼上圖片
+```
+
+放置圖片在/your folder/themes/next-reloaded/source/images
+貼上相對路徑
+![my](/images/avatar_memo.png) 
+或是用html寫法，可以控制大小
+<img src="/images/avatar_memo.png" width="150px" />
+
+```
+
 
 #### 在標頭放上可愛的git連結
 ```

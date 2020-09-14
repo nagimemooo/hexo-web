@@ -3,6 +3,7 @@ title: "[Go] 學習 GO 收藏文"
 tags:
   - golang
 categories:
+  - Tech.
   - back-end
   - golang
 date: 2020-09-09 21:16:32

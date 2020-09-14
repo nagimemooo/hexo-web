@@ -3,12 +3,13 @@ title: About Me
 date: 2020-09-06 13:53:06
 ---
 
+<img src="/images/avatar_memo.png" width="150px" />
 
 <h1 align="center">Hi 👋, I'm Nagi</h1>
 <h3 align="center">打雜後端IT工程師，Go經歷一年 & 正在學習 React。 喜歡貓喜歡狗。</h3>
 
 
-
+#### About
 - 🌱 I’m currently learning **React,Golang,Python**
 
 - 📝 I regulary write articles on [https://nagimemooo.github.io/](https://nagimemooo.github.io/)
