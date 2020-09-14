@@ -190,6 +190,7 @@ WARN   It's rebase to v6.0.0 and future maintenance will resume there
   - （再來一次）試著更換主題
   1. Clone v7.8.0 最新的倉庫（如放在 next-reloaded）：
 $ git clone https://github.com/theme-next/hexo-theme-next themes/next-reloaded
+（v.5.1.4）
   2. 在 Hexo 的主配置文件中设置主题：
 theme: next-reloaded
   3. 重新開啟就正常了
@@ -324,6 +325,23 @@ menu:
 
 ```
 
+#### 開啟文章與網站訪問數字
+```
+主題內建不蒜子計數器
+_config.yml
+busuanzi_count:
+  enable: true
+  total_visitors: true
+  total_visitors_icon: fa fa-user
+  total_views: true
+  total_views_icon: fa fa-eye
+  post_views: true
+  post_views_icon: fa fa-eye
+
+本地預覽時底部訪問人數與總訪問的數字會異常大，這是正常现象
+只需要部署至雲端即可恢復正常
+```
+
 
 #### 在標頭放上可愛的git連結
 ```
@@ -384,4 +402,4 @@ Welcome to [Hexo](https://hexo.io/)!  Check [documentation](https://hexo.io/docs
 - [NextT 主题配置](https://theme-next.iissnan.com/theme-settings.html)
 - [NextT 內置標籤](https://theme-next.iissnan.com/tag-plugins.html)
 - [Hexo个人博客NexT主题设置Scheme外观](https://blog.csdn.net/mqdxiaoxiao/article/details/92843057?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param)
-
+- [hexo页脚添加访客人数和总访问量](https://chrischen0405.github.io/2018/09/11/post20180911/)
