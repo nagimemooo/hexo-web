@@ -4,8 +4,15 @@ date: {{ date }}
 tags:
   - test
 categories:
+  - Tech.
   - Web
-  - blog
+  - front-end
+  - react
+
+
+  - Tech.
+  - back-end
+  - golang
 ---
 
 {% cq %} 
