@@ -34,4 +34,4 @@ categories:
 
 
 
-{% note class_name %} # 參考文章 {% endnote %}
+{% note class_name %} # 網路參考文章 {% endnote %}

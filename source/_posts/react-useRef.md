@@ -1,5 +1,5 @@
 ---
-title: "function component中的ref屬性改寫"
+title: "[練習]React function comp.中的ref屬性改寫"
 tags:
   - react
 categories:
@@ -28,7 +28,7 @@ function component中的ref屬性改寫．
 
 
 
-
+- 改寫比較
 
 <table><tr><td valign="top" width="30%" height="100%">
 #### class component
@@ -77,9 +77,10 @@ import React , { useRef }from 'react';
 
 //class Suggest extends React.Component{
   const SuggestOpt=(props)=>{
-    // getValue(){
-    //   return this.refs.lowlevelinput.valaue;
-    // }
+     // const handleClick = () => {
+  const handleChangeValue = (event) => {
+    console.log(inputRef.current.value);
+  };
    // render(){
     const handleClick = () => {
       inputRef.current.focus(); //滑鼠會跳到input的欄位
@@ -93,6 +94,7 @@ import React , { useRef }from 'react';
            defaultValue={props.defaultValue}
            ref={inputRef}
            id={props.id}
+            onChange={handleChangeValue}
            />  
           <datalist id={randomid} >
           {props.options.map((item,idx)=>
