@@ -92,6 +92,17 @@ https://demomemooo.herokuapp.com/
 
 小提醒：之後如果要更新記得先在本地起看看，並且照一般在 vscode 操作 git 上傳即可．
 
+部署設定：
+- 保護源代碼
+設定GENERATE_SOURCEMAP環境變數可以使得源代碼不會出現在dev tool中顯示
+add into package.json:
+```
+"scripts": {    
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+}
+```
+
 ## 現有專案上傳
 
 ```
@@ -133,3 +144,11 @@ $ heroku git:remote -a testmemooo
 - 但這樣做打開網站會錯誤，以下面文章的最佳解答照做即可
   [React 專案佈署 heroku 問題](https://ithelp.ithome.com.tw/questions/10198600)
   大致上做法是自行建立 server.js 與產生 build，只需要推 build 檔案上去即可（記得 gitignor 要拿掉 build folder）
+  
+
+
+
+{% note class_name %} ## 網路參考文章 {% endnote %}
+
+- [Deploying create-react-app project isn't uglifying my code](https://stackoverflow.com/questions/58359500/deploying-create-react-app-project-isnt-uglifying-my-code)
+- [React Create Script 2.0 減少維護環境配置](https://linyencheng.github.io/2019/02/27/react-create-script-2/)
