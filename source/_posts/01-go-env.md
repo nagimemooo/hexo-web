@@ -107,6 +107,7 @@ go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct
 {% note class_name %} # 參考文章 {% endnote %}
 windows 安裝Go
 - [[Go] Go 語言於 Windows 上之安裝與環境設定](https://oranwind.org/go-go-yu-yan-yu-windows-shang-zhi-an-zhuang-yu-huan-jing-she-ding/ "[Go] Go 語言於 Windows 上之安裝與環境設定") 
+- [用vscode开发调试golang超简单教程](https://blog.csdn.net/v6543210/article/details/84504460)
 
 Ｍac 安裝Go
 - [Mac上Go環境和VS Code的正確安裝與配置方法](https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/391186/) 

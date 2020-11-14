@@ -26,3 +26,11 @@ date: 2020-09-15 20:27:29
   See the Pen <a href='https://codepen.io/nagimemooo/pen/OJVGppz'>CSS_flex(Flexible Box)</a> by nagimemooo
   (<a href='https://codepen.io/nagimemooo'>@nagimemooo</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+
+
+### Modal Box
+
+- margin: 15% auto; /* 15% from the top and centered */
+[How TO - CSS/JS Modal](https://www.w3schools.com/howto/howto_css_modals.asp)
+
+
